@@ -28,10 +28,10 @@ $space-6: 24px;
 
 .card {
   @extend %panel;
-  padding: $space-5;
+  padding: $space-6;
   display: flex;
   flex-direction: column;
-  gap: $space-3;
+  gap: $space-4;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -60,7 +60,7 @@ $space-6: 24px;
 .card-footer {
   display: flex;
   flex-wrap: wrap;
-  gap: $space-2;
+  gap: $space-3;
 }
 
 .table {
@@ -72,7 +72,7 @@ $space-6: 24px;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: $space-3;
-  padding: $space-3 $space-5;
+  padding: $space-4 $space-6;
   border-bottom: 1px solid $color-border;
   align-items: center;
 }
@@ -104,16 +104,16 @@ $space-6: 24px;
 .selection-panel {
   @extend %panel;
   background-color: $color-surface;
-  padding: $space-3 $space-4;
+  padding: $space-4 $space-5;
   display: flex;
   flex-direction: column;
-  gap: $space-2;
+  gap: $space-3;
 }
 
 .selection-panel-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: $space-2;
+  gap: $space-3;
 }
 
 .form {
