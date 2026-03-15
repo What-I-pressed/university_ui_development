@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="create user dialog">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>create user</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline admin</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="events.html">events</a>
+        <a class="link" href="my-tickets.html">my tickets</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">user management</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link" href="users.html">users listing</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="user-create.html">create user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-details.html">user details</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-edit.html">edit user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-delete.html">delete user</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div>
+              <h1 class="heading-lg section-title">create user dialog</h1>
+              <p class="text-muted">fill in credentials and assign a role.</p>
+            </div>
+            <div class="content-actions">
+              <a class="button" href="users.html">back to list</a>
+            </div>
+          </section>
+
+          <!-- modal dialog preview -->
+          <section class="card modal" aria-label="create user modal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="create-user-title">
+              <header class="modal-header">
+                <div>
+                  <h2 class="heading-md" id="create-user-title">new user</h2>
+                  <p class="text-small">all fields are required.</p>
+                </div>
+                <span class="badge badge--status">draft</span>
+              </header>
+              <div class="modal-body">
+                <form class="form" action="#" method="post">
+                  <div class="form-field">
+                    <label class="form-label" for="create-username">username</label>
+                    <input class="form-input" id="create-username" name="username" type="text" placeholder="username" required>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="create-password">password</label>
+                    <input class="form-input" id="create-password" name="password" type="password" placeholder="min 8 characters" required>
+                    <p class="form-hint">use at least 1 number and 1 symbol.</p>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="create-confirm">confirm password</label>
+                    <input class="form-input" id="create-confirm" name="confirm" type="password" placeholder="repeat password" required>
+                    <p class="form-error">passwords do not match.</p>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="create-role">role</label>
+                    <select class="form-select" id="create-role" name="role" required>
+                      <option value="admin">admin</option>
+                      <option value="regular">regular</option>
+                    </select>
+                  </div>
+                  <div class="form-actions">
+                    <button class="button button--primary" type="submit">ok</button>
+                    <a class="button" href="users.html">cancel</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>

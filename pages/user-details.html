@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="user details page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>user details</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline admin</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="events.html">events</a>
+        <a class="link" href="my-tickets.html">my tickets</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">user management</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link" href="users.html">users listing</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-create.html">create user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="user-details.html">user details</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-edit.html">edit user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-delete.html">delete user</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div>
+              <h1 class="heading-lg section-title">user details</h1>
+              <p class="text-muted">selected profile information and permissions.</p>
+            </div>
+            <div class="content-actions">
+              <a class="button" href="user-edit.html">edit user</a>
+              <a class="button button--danger" href="user-delete.html">delete</a>
+            </div>
+          </section>
+
+          <!-- user summary -->
+          <section class="card">
+            <div class="card-header">
+              <div>
+                <h2 class="heading-md">marta lon</h2>
+                <p class="text-small">marta@ticketline.io</p>
+              </div>
+              <span class="badge badge--admin">admin</span>
+            </div>
+            <div class="card-body details-grid">
+              <div class="details-row">
+                <p class="text-small">status</p>
+                <p class="text-strong">active</p>
+              </div>
+              <div class="details-row">
+                <p class="text-small">last login</p>
+                <p class="text-strong">today at 09:30</p>
+              </div>
+              <div class="details-row">
+                <p class="text-small">assigned venue</p>
+                <p class="text-strong">kyiv arena</p>
+              </div>
+              <div class="details-row">
+                <p class="text-small">access level</p>
+                <p class="text-strong">full access</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- permissions -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="heading-md">permissions</h2>
+              <span class="chip">updated today</span>
+            </div>
+            <div class="card-body">
+              <ul class="list">
+                <li class="list-item">
+                  <p class="text-strong">manage users</p>
+                  <p class="text-small">create, edit, and deactivate user accounts.</p>
+                </li>
+                <li class="list-item">
+                  <p class="text-strong">control ticket inventory</p>
+                  <p class="text-small">lock seats so bookings and purchases are unique.</p>
+                </li>
+                <li class="list-item">
+                  <p class="text-strong">resolve booking conflicts</p>
+                  <p class="text-small">review cancellations and release seats.</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>

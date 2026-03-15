@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="events listing">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>events</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline events</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="users.html">users</a>
+        <a class="link" href="my-tickets.html">my tickets</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">events</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="events.html">events listing</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="event-details.html">event details</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="my-tickets.html">my tickets</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div>
+              <h1 class="heading-lg section-title">events listing</h1>
+              <p class="text-muted">browse concerts and reserve or buy tickets.</p>
+            </div>
+            <div class="content-actions">
+              <a class="button" href="errors.html">view alerts</a>
+            </div>
+          </section>
+
+          <!-- event cards -->
+          <section class="card-grid">
+            <article class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="heading-md">sunset jazz night</h2>
+                  <p class="text-small">kyiv arena · june 20</p>
+                </div>
+                <span class="chip">open sales</span>
+              </div>
+              <div class="card-body">
+                <p class="text">tickets available: 120 · reservations: 32</p>
+                <p class="text-small">one seat per user at a time, no double bookings.</p>
+              </div>
+              <div class="card-footer">
+                <a class="button button--primary" href="event-details.html">view seats</a>
+                <a class="button" href="my-tickets.html">my bookings</a>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="heading-md">indie wave tour</h2>
+                  <p class="text-small">sound hub · july 02</p>
+                </div>
+                <span class="chip">limited</span>
+              </div>
+              <div class="card-body">
+                <p class="text">tickets available: 18 · reservations: 60</p>
+                <p class="text-small">reserved seats lock for 15 minutes before release.</p>
+              </div>
+              <div class="card-footer">
+                <a class="button button--primary" href="event-details.html">view seats</a>
+                <a class="button" href="my-tickets.html">my bookings</a>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-header">
+                <div>
+                  <h2 class="heading-md">open air cinema</h2>
+                  <p class="text-small">river stage · august 11</p>
+                </div>
+                <span class="chip">pre-sale</span>
+              </div>
+              <div class="card-body">
+                <p class="text">tickets available: 200 · reservations: 12</p>
+                <p class="text-small">buy or reserve to keep a ticket unique.</p>
+              </div>
+              <div class="card-footer">
+                <a class="button button--primary" href="event-details.html">view seats</a>
+                <a class="button" href="my-tickets.html">my bookings</a>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>
