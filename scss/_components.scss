@@ -188,6 +188,9 @@ $space-6: 24px;
 
 .button {
   @extend %control-base;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 18px;
   font-size: 14px;
   font-weight: 600;
