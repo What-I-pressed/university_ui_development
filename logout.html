@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="logout screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>logged out</title>
+  </head>
+  <body class="page page--auth">
+    <!-- logout message -->
+    <main class="auth-layout">
+      <section class="card auth-card">
+        <header class="card-header">
+          <div class="top-bar-brand">
+            <img class="logo" src="assets/images/logo.svg" alt="ticketline logo">
+            <div>
+              <p class="text-small">ticketline workspace</p>
+              <h1 class="heading-lg">logged out</h1>
+            </div>
+          </div>
+        </header>
+        <div class="card-body">
+          <p class="text">you have signed out. return to login to continue.</p>
+        </div>
+        <div class="card-footer">
+          <a class="button button--primary" href="index.html">back to login</a>
+          <a class="button" href="pages/events.html">browse events</a>
+        </div>
+      </section>
+      <aside class="card auth-card auth-info">
+        <h2 class="heading-md">session ended</h2>
+        <p class="text-small">unsaved reservations are released after 15 minutes.</p>
+        <div class="auth-actions">
+          <a class="link" href="pages/errors.html">view alerts</a>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

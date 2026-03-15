@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="login screen for ticketline management">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <title>ticketline login</title>
+  </head>
+  <body class="page page--auth">
+    <!-- auth layout -->
+    <main class="auth-layout">
+      <!-- login form card -->
+      <section class="card auth-card">
+        <header class="card-header">
+          <div class="top-bar-brand">
+            <img class="logo" src="assets/images/logo.svg" alt="ticketline logo">
+            <div>
+              <p class="text-small">ticketline workspace</p>
+              <h1 class="heading-lg">sign in</h1>
+            </div>
+          </div>
+        </header>
+        <div class="card-body">
+          <p class="text-muted">manage users, events, and ticket bookings.</p>
+          <form class="form" action="#" method="post">
+            <div class="form-field">
+              <label class="form-label" for="login-email">email</label>
+              <input class="form-input" id="login-email" name="email" type="email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="login-password">password</label>
+              <input class="form-input" id="login-password" name="password" type="password" placeholder="enter your password" required>
+            </div>
+            <div class="form-actions">
+              <button class="button button--primary" type="submit">sign in</button>
+              <a class="link" href="pages/events.html">continue as guest</a>
+            </div>
+          </form>
+        </div>
+        <footer class="card-footer">
+          <a class="link" href="pages/errors.html">forgot password</a>
+        </footer>
+      </section>
+      <!-- info panel -->
+      <aside class="card auth-card auth-info">
+        <div class="auth-hero">
+          <h2 class="heading-md">plan, reserve, and sell tickets</h2>
+          <p class="text">ticketline keeps each seat unique so one ticket cannot be booked or sold twice.</p>
+        </div>
+        <div class="dashboard-metrics">
+          <div class="metric">
+            <p class="text-small">active events</p>
+            <p class="heading-md">12</p>
+          </div>
+          <div class="metric">
+            <p class="text-small">pending bookings</p>
+            <p class="heading-md">58</p>
+          </div>
+          <div class="metric">
+            <p class="text-small">support requests</p>
+            <p class="heading-md">3</p>
+          </div>
+        </div>
+        <div class="auth-actions">
+          <a class="button" href="pages/users.html">view users</a>
+          <a class="button button--ghost" href="pages/events.html">browse events</a>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>
