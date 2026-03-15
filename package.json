@@ -1,0 +1,17 @@
+{
+  "name": "front_ig",
+  "version": "1.0.0",
+  "description": "static layout for ticketline lab 1",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass --no-source-map scss/main.scss css/main.css",
+    "watch:css": "sass --watch scss/main.scss css/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}

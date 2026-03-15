@@ -1,0 +1,168 @@
+@use "colors" as *;
+@use "mixins" as *;
+
+.page-shell {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: $color-surface-strong;
+  border-bottom: 1px solid $color-border;
+}
+
+.top-bar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-bar-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  flex: 1;
+}
+
+.side-nav {
+  background-color: $color-surface-strong;
+  border-right: 1px solid $color-border;
+  padding: 24px 16px;
+}
+
+.side-nav-title {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-ink-muted;
+}
+
+.side-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.side-nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: $color-ink;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:link {
+  color: $color-ink;
+}
+
+.nav-link:visited {
+  color: $color-ink;
+}
+
+.nav-link:hover {
+  background-color: $color-surface;
+  color: $color-brand-strong;
+}
+
+.nav-link:active {
+  background-color: $color-border;
+}
+
+.nav-link:focus-visible {
+  @include focus-ring;
+}
+
+.nav-link--active {
+  background-color: $color-brand;
+  color: $color-surface-strong;
+}
+
+.main-content {
+  padding: 28px 24px 48px;
+}
+
+.content-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.content-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.content-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.page-footer {
+  padding: 16px 24px 32px;
+  color: $color-ink-muted;
+  font-size: 13px;
+}
+
+@include respond(md) {
+  .page-body {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .content-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@include respond(lg) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
