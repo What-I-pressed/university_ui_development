@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="user listing for ticketline">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>ticketline users</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline admin</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="events.html">events</a>
+        <a class="link" href="my-tickets.html">my tickets</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">user management</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="users.html">users listing</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-create.html">create user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-details.html">user details</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-edit.html">edit user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-delete.html">delete user</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div>
+              <h1 class="heading-lg section-title">users listing</h1>
+              <p class="text-muted">admin and regular accounts with booking permissions.</p>
+            </div>
+            <div class="content-actions">
+              <a class="button button--primary" href="user-create.html">create user</a>
+              <a class="button" href="user-edit.html">edit selected</a>
+            </div>
+          </section>
+
+          <!-- users table -->
+          <section class="table" aria-label="users list">
+            <div class="table-row table-row--header">
+              <div class="table-cell">user</div>
+              <div class="table-cell">role</div>
+              <div class="table-cell">status</div>
+              <div class="table-cell">actions</div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">
+                <div>
+                  <p class="text-strong">marta lon</p>
+                  <p class="text-small">marta@ticketline.io</p>
+                </div>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--admin">admin</span>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--status">active</span>
+              </div>
+              <div class="table-cell">
+                <a class="link" href="user-details.html">view</a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">
+                <div>
+                  <p class="text-strong">oleh zub</p>
+                  <p class="text-small">oleh@ticketline.io</p>
+                </div>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--regular">regular</span>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--status">pending</span>
+              </div>
+              <div class="table-cell">
+                <a class="link" href="user-details.html">view</a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">
+                <div>
+                  <p class="text-strong">ira koval</p>
+                  <p class="text-small">ira@ticketline.io</p>
+                </div>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--regular">regular</span>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--status">blocked</span>
+              </div>
+              <div class="table-cell">
+                <a class="link" href="user-details.html">view</a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="delete user confirmation">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>delete user</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline admin</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="events.html">events</a>
+        <a class="link" href="my-tickets.html">my tickets</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">user management</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link" href="users.html">users listing</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-create.html">create user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-details.html">user details</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="user-edit.html">edit user</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="user-delete.html">delete user</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div>
+              <h1 class="heading-lg section-title">delete user</h1>
+              <p class="text-muted">confirm deactivation for selected account.</p>
+            </div>
+            <div class="content-actions">
+              <a class="button" href="user-details.html">cancel</a>
+            </div>
+          </section>
+
+          <!-- delete confirmation -->
+          <section class="card">
+            <div class="card-header">
+              <div>
+                <h2 class="heading-md">marta lon</h2>
+                <p class="text-small">marta@ticketline.io</p>
+              </div>
+              <span class="badge badge--admin">admin</span>
+            </div>
+            <div class="card-body">
+              <div class="alert alert--warning">
+                <p class="text-strong">this action is permanent.</p>
+                <p class="text-small">bookings will be reassigned to another admin.</p>
+              </div>
+              <div class="status-grid">
+                <div class="status-row">
+                  <span class="text-small">open bookings</span>
+                  <span class="text-strong">4</span>
+                </div>
+                <div class="status-row">
+                  <span class="text-small">last activity</span>
+                  <span class="text-strong">yesterday</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="button button--danger" href="users.html">confirm delete</a>
+              <a class="button" href="user-details.html">keep user</a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>
