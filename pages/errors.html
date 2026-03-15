@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="error notifications and validation examples">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>error notifications</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline admin</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="events.html">events</a>
+        <a class="link" href="my-tickets.html">my tickets</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">system feedback</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="errors.html">errors</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="events.html">events</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="users.html">users</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div>
+              <h1 class="heading-lg section-title">error notifications</h1>
+              <p class="text-muted">examples of system alerts and validation errors.</p>
+            </div>
+            <div class="content-actions">
+              <a class="button" href="events.html">back to events</a>
+            </div>
+          </section>
+
+          <!-- alert samples -->
+          <section class="content-grid">
+            <div class="alert alert--error">
+              <p class="text-strong">booking failed</p>
+              <p class="text-small">seat a12 is already reserved by another user.</p>
+            </div>
+            <div class="alert alert--warning">
+              <p class="text-strong">payment pending</p>
+              <p class="text-small">complete checkout within 15 minutes to keep your seats.</p>
+            </div>
+            <div class="alert alert--success">
+              <p class="text-strong">booking cancelled</p>
+              <p class="text-small">seat b05 is now available for other users.</p>
+            </div>
+          </section>
+
+          <!-- validation example -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="heading-md">request refund</h2>
+              <span class="chip">validation errors</span>
+            </div>
+            <div class="card-body">
+              <form class="form" action="#" method="post">
+                <div class="form-field">
+                  <label class="form-label" for="refund-code">ticket code</label>
+                  <input class="form-input" id="refund-code" name="ticket" type="text" placeholder="tl-2189" required>
+                  <p class="form-error">ticket code must start with tl-.</p>
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="refund-reason">reason</label>
+                  <textarea class="form-textarea" id="refund-reason" name="reason" required></textarea>
+                  <p class="form-error">please describe the issue in at least 10 characters.</p>
+                </div>
+                <div class="form-actions">
+                  <button class="button button--primary" type="submit">submit request</button>
+                  <a class="button" href="events.html">cancel</a>
+                </div>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>

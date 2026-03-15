@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="event details and seat selection">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>event details</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline events</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="users.html">users</a>
+        <a class="link" href="my-tickets.html">my tickets</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">events</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link" href="events.html">events listing</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="event-details.html">event details</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="my-tickets.html">my tickets</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div class="event-hero">
+              <h1 class="heading-lg section-title">sunset jazz night</h1>
+              <p class="text-muted">kyiv arena · june 20 · doors open 18:00</p>
+              <div class="event-meta">
+                <span class="badge badge--status">tickets unique per user</span>
+                <span class="badge badge--status">booking timeout 15 min</span>
+              </div>
+            </div>
+            <div class="content-actions">
+              <a class="button" href="events.html">back to list</a>
+            </div>
+          </section>
+
+          <!-- seat map and actions -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="heading-md">seat selection</h2>
+              <span class="chip">hall a</span>
+            </div>
+            <div class="card-body">
+              <p class="text-small">choose an available seat. reserved or sold seats cannot be selected by another user.</p>
+              <div class="legend">
+                <span class="legend-item"><span class="legend-swatch legend-swatch--available"></span>available</span>
+                <span class="legend-item"><span class="legend-swatch legend-swatch--reserved"></span>reserved</span>
+                <span class="legend-item"><span class="legend-swatch legend-swatch--sold"></span>sold</span>
+              </div>
+              <div class="ticket-grid">
+                <div class="seat seat--available">a1</div>
+                <div class="seat seat--available">a2</div>
+                <div class="seat seat--reserved">a3</div>
+                <div class="seat seat--sold">a4</div>
+                <div class="seat seat--available">a5</div>
+                <div class="seat seat--available">a6</div>
+                <div class="seat seat--available">b1</div>
+                <div class="seat seat--sold">b2</div>
+                <div class="seat seat--reserved">b3</div>
+                <div class="seat seat--available">b4</div>
+                <div class="seat seat--available">b5</div>
+                <div class="seat seat--available">b6</div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="button button--primary" href="my-tickets.html">buy selected seat</a>
+              <a class="button" href="my-tickets.html">reserve selected seat</a>
+            </div>
+          </section>
+
+          <!-- booking rules -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="heading-md">booking rules</h2>
+              <span class="chip">policy</span>
+            </div>
+            <div class="card-body">
+              <ul class="list">
+                <li class="list-item">
+                  <p class="text-strong">one seat per booking</p>
+                  <p class="text-small">a ticket can be booked or purchased only once.</p>
+                </li>
+                <li class="list-item">
+                  <p class="text-strong">15 minute hold</p>
+                  <p class="text-small">reservations expire if payment is not completed.</p>
+                </li>
+                <li class="list-item">
+                  <p class="text-strong">cancel anytime</p>
+                  <p class="text-small">cancelled reservations free seats instantly.</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>

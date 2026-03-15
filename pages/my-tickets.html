@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="my tickets">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=ibm+plex+sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>my tickets</title>
+  </head>
+  <body class="page page--workspace">
+    <!-- top navigation bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <img class="logo" src="../assets/images/logo.svg" alt="ticketline logo">
+        <p class="top-bar-title">ticketline events</p>
+      </div>
+      <nav class="top-bar-nav" aria-label="top navigation">
+        <a class="link" href="users.html">users</a>
+        <a class="link" href="events.html">events</a>
+      </nav>
+      <div class="top-bar-actions">
+        <a class="button" href="../logout.html">logout</a>
+      </div>
+    </header>
+
+    <!-- page shell with sidebar and main content -->
+    <div class="page-shell">
+      <div class="page-body">
+        <aside class="side-nav">
+          <p class="side-nav-title">tickets</p>
+          <nav aria-label="sidebar">
+            <ul class="side-nav-list">
+              <li class="side-nav-item">
+                <a class="nav-link" href="events.html">events listing</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link" href="event-details.html">event details</a>
+              </li>
+              <li class="side-nav-item">
+                <a class="nav-link nav-link--active" href="my-tickets.html">my tickets</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-content">
+          <!-- page header -->
+          <section class="content-header">
+            <div>
+              <h1 class="heading-lg section-title">my tickets</h1>
+              <p class="text-muted">purchases and reservations for the current user.</p>
+            </div>
+            <div class="content-actions">
+              <a class="button" href="events.html">browse events</a>
+            </div>
+          </section>
+
+          <!-- tickets list -->
+          <section class="table" aria-label="tickets list">
+            <div class="table-row table-row--header">
+              <div class="table-cell">event</div>
+              <div class="table-cell">seat</div>
+              <div class="table-cell">status</div>
+              <div class="table-cell">actions</div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">
+                <div>
+                  <p class="text-strong">sunset jazz night</p>
+                  <p class="text-small">june 20 · kyiv arena</p>
+                </div>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--status">a2</span>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--status">reserved</span>
+              </div>
+              <div class="table-cell">
+                <a class="link" href="event-details.html">view</a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">
+                <div>
+                  <p class="text-strong">indie wave tour</p>
+                  <p class="text-small">july 02 · sound hub</p>
+                </div>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--status">b5</span>
+              </div>
+              <div class="table-cell">
+                <span class="badge badge--status">purchased</span>
+              </div>
+              <div class="table-cell">
+                <a class="link" href="event-details.html">view</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- cancel booking section -->
+          <section class="card">
+            <div class="card-header">
+              <h2 class="heading-md">cancel booking</h2>
+              <span class="chip">seat a2</span>
+            </div>
+            <div class="card-body">
+              <p class="text">cancelling will release the seat immediately for other users.</p>
+              <div class="status-grid">
+                <div class="status-row">
+                  <span class="text-small">booking expires</span>
+                  <span class="text-strong">in 12 minutes</span>
+                </div>
+                <div class="status-row">
+                  <span class="text-small">refund</span>
+                  <span class="text-strong">not applicable</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a class="button button--danger" href="errors.html">cancel booking</a>
+              <a class="button" href="event-details.html">keep booking</a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>ticketline admin ui · static layout for lab 1</p>
+    </footer>
+  </body>
+</html>
